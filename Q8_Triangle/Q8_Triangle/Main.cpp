@@ -29,8 +29,9 @@ int main()
 	for (int i = 0; i < numTestCases; i++)
 	{
 		int x1, y1, x2, y2, x3, y3;
+		int L1, L2, L3;
+		int min, mid, max;
 		double l1, l2, l3;
-		double min, mid, max;
 		int result = 0;
 		inStream >> x1;
 		inStream >> y1;
@@ -38,65 +39,68 @@ int main()
 		inStream >> y2;
 		inStream >> x3;
 		inStream >> y3;
-		l1 = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-		l2 = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
-		l3 = sqrt(pow(x1 - x3, 2) + pow(y1 - y3, 2));
+		L1 = pow((x2 - x1), 2.0) + pow((y2 - y1), 2);
+		L2 = pow((x3 - x2), 2.0) + pow((y3 - y2), 2);
+		L3 = pow((x1 - x3), 2.0) + pow((y1 - y3), 2);
+		l1 = sqrt(L1);
+		l2 = sqrt(L2);
+		l3 = sqrt(L3);
 		if (l1 >= l2 && l1 >= l3)
 		{
-			max = l1;
+			max = L1;
 			if (l2 >= l3)
 			{
-				mid = l2;
-				min = l3;
+				mid = L2;
+				min = L3;
 			}
 			else
 			{
-				mid = l3;
-				min = l2;
+				mid = L3;
+				min = L2;
 			}
 		}
 		else if (l2 >= l1 && l2 >= l3)
 		{
-			max = l2;
+			max = L2;
 			if (l1 >= l3)
 			{
-				mid = l1;
-				min = l3;
+				mid = L1;
+				min = L3;
 			}
 			else
 			{
-				mid = l3;
-				min = l1;
+				mid = L3;
+				min = L1;
 			}
 		}
 		else
 		{
-			max = l3;
+			max = L3;
 			if (l2 >= l1)
 			{
-				mid = l2;
-				min = l1;
+				mid = L2;
+				min = L1;
 			}
 			else
 			{
-				mid = l1;
-				min = l2;
+				mid = L1;
+				min = L2;
 			}
 		}
 
-		if (max >= mid + min)
+		if (max > mid + min)
 		{
 			result = 0;
 		}
-		else if (min*min + mid*mid == max*max)
+		else if (min + mid == max)
 		{
 			result = 1;
 		}
-		else if (min*min + mid*mid > max*max)
+		else if (min + mid > max)
 		{
 			result = 3;
 		}
-		else if (min*min + mid*mid < max*max)
+		else if (min + mid < max)
 		{
 			result = 2;
 		}
