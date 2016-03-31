@@ -1,0 +1,5 @@
+﻿  Main.cpp
+c:\project\cs_cpp_local\q19_hammingnumber\q19_hammingnumber\main.cpp(40): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\project\cs_cpp_local\q19_hammingnumber\q19_hammingnumber\main.cpp(41): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\project\cs_cpp_local\q19_hammingnumber\q19_hammingnumber\main.cpp(42): warning C4244: '=': 'double'에서 'unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Q19_HammingNumber.vcxproj -> C:\Project\cs_cpp_local\Q19_HammingNumber\Debug\Q19_HammingNumber.exe
