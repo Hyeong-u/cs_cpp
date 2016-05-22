@@ -1,0 +1,2 @@
+﻿  Main.cpp
+c:\project\cs_cpp_local\13_memory.management.not.initialize\13_memory.management.not.initialize\main.cpp(7): error C4700: 초기화되지 않은 'j' 지역 변수를 사용했습니다.
